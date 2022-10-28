@@ -1,0 +1,5 @@
+undetected_chromedriver==2.1.1
+random_word==1.0.7
+selenium==4.3.0
+pywin32==304
+PyYAML

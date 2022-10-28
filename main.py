@@ -77,5 +77,5 @@ if __name__ == '__main__':
         threads.append(
             threading.Thread(target=Pro))
         threads[-1].start()
-        Sleep(int(delay))
+        sleep(int(delay))
 exit()

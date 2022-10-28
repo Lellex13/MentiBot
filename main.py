@@ -22,10 +22,13 @@ import ctypes
 import sys
 import os
 
+os.system("cls")
+
 code = input("Code: ")
 text = input("Message: ")
 times = int(input("Threads: "))
-times = int(input("Delay Between: "))
+delay = int(input("Delay Between: "))
+print()
 
 
 def generate(self):
@@ -58,6 +61,7 @@ class Pro:
         self.DRIVER.set_window_size(self.DRIVERWINDOWSIZE[0], self.DRIVERWINDOWSIZE[1])
         self.DRIVER.set_window_position((round(GetSystemMetrics(0) / 2) - round(self.DRIVERWINDOWSIZE[0] / 2)), (round(GetSystemMetrics(1) / 2) - round(self.DRIVERWINDOWSIZE[1] / 2)))
 
+        print("[!] Sent vote")
         generate(self)
 
         self.DRIVER.close()
@@ -73,4 +77,5 @@ if __name__ == '__main__':
         threads.append(
             threading.Thread(target=Pro))
         threads[-1].start()
+        Sleep(int(delay))
 exit()

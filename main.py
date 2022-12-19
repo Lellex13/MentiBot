@@ -69,11 +69,8 @@ class Pro:
 if __name__ == '__main__':
     threads = []
     for i in range(times):
-        # determine the indices of the list this thread will handle
         start = i * len(str(times))
-        # special case on the last chunk to account for uneven splits
         end = None if i+1 == times else (i+1) * len(str(times))
-        # create the thread
         threads.append(
             threading.Thread(target=Pro))
         threads[-1].start()
